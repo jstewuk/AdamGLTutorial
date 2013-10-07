@@ -19,6 +19,15 @@
 		389D847F1802401700EA9299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D84671802401700EA9299 /* UIKit.framework */; };
 		389D84871802401700EA9299 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 389D84851802401700EA9299 /* InfoPlist.strings */; };
 		389D84891802401700EA9299 /* AdamGLTutorial2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 389D84881802401700EA9299 /* AdamGLTutorial2Tests.m */; };
+		389D8495180240EF00EA9299 /* GLK2DrawCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 389D8494180240EF00EA9299 /* GLK2DrawCall.m */; };
+		389D8498180242F700EA9299 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389D8497180242F700EA9299 /* ViewController.m */; };
+		389D849A18024D7700EA9299 /* VertexPositionUnprojected.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 389D849918024D7700EA9299 /* VertexPositionUnprojected.vsh */; };
+		389D849C18024DCC00EA9299 /* FragmentColorOnly.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 389D849B18024DCC00EA9299 /* FragmentColorOnly.fsh */; };
+		389D849F18024E7D00EA9299 /* GLK2Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 389D849E18024E7D00EA9299 /* GLK2Shader.m */; };
+		389D84A2180255D100EA9299 /* GLK2ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 389D84A1180255D100EA9299 /* GLK2ShaderProgram.m */; };
+		389D84A51802584500EA9299 /* GLK2Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 389D84A41802584500EA9299 /* GLK2Attribute.m */; };
+		389D84A61802682A00EA9299 /* VertexPositionUnprojected.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 389D849918024D7700EA9299 /* VertexPositionUnprojected.vsh */; };
+		389D84A71802682A00EA9299 /* FragmentColorOnly.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 389D849B18024DCC00EA9299 /* FragmentColorOnly.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,18 @@
 		389D84841802401700EA9299 /* AdamGLTutorial2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdamGLTutorial2Tests-Info.plist"; sourceTree = "<group>"; };
 		389D84861802401700EA9299 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		389D84881802401700EA9299 /* AdamGLTutorial2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdamGLTutorial2Tests.m; sourceTree = "<group>"; };
+		389D8493180240EF00EA9299 /* GLK2DrawCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLK2DrawCall.h; sourceTree = "<group>"; };
+		389D8494180240EF00EA9299 /* GLK2DrawCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLK2DrawCall.m; sourceTree = "<group>"; };
+		389D8496180242F700EA9299 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		389D8497180242F700EA9299 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		389D849918024D7700EA9299 /* VertexPositionUnprojected.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexPositionUnprojected.vsh; sourceTree = "<group>"; };
+		389D849B18024DCC00EA9299 /* FragmentColorOnly.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentColorOnly.fsh; sourceTree = "<group>"; };
+		389D849D18024E7D00EA9299 /* GLK2Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLK2Shader.h; sourceTree = "<group>"; };
+		389D849E18024E7D00EA9299 /* GLK2Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLK2Shader.m; sourceTree = "<group>"; };
+		389D84A0180255D100EA9299 /* GLK2ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLK2ShaderProgram.h; sourceTree = "<group>"; };
+		389D84A1180255D100EA9299 /* GLK2ShaderProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLK2ShaderProgram.m; sourceTree = "<group>"; };
+		389D84A31802584500EA9299 /* GLK2Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLK2Attribute.h; sourceTree = "<group>"; };
+		389D84A41802584500EA9299 /* GLK2Attribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLK2Attribute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +98,18 @@
 		389D84571802401700EA9299 = {
 			isa = PBXGroup;
 			children = (
+				389D8493180240EF00EA9299 /* GLK2DrawCall.h */,
+				389D8494180240EF00EA9299 /* GLK2DrawCall.m */,
+				389D8496180242F700EA9299 /* ViewController.h */,
+				389D8497180242F700EA9299 /* ViewController.m */,
+				389D849918024D7700EA9299 /* VertexPositionUnprojected.vsh */,
+				389D849B18024DCC00EA9299 /* FragmentColorOnly.fsh */,
+				389D849D18024E7D00EA9299 /* GLK2Shader.h */,
+				389D84A31802584500EA9299 /* GLK2Attribute.h */,
+				389D84A41802584500EA9299 /* GLK2Attribute.m */,
+				389D849E18024E7D00EA9299 /* GLK2Shader.m */,
+				389D84A0180255D100EA9299 /* GLK2ShaderProgram.h */,
+				389D84A1180255D100EA9299 /* GLK2ShaderProgram.m */,
 				389D84691802401700EA9299 /* AdamGLTutorial2 */,
 				389D84821802401700EA9299 /* AdamGLTutorial2Tests */,
 				389D84621802401700EA9299 /* Frameworks */,
@@ -219,6 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389D84A61802682A00EA9299 /* VertexPositionUnprojected.vsh in Resources */,
+				389D84A71802682A00EA9299 /* FragmentColorOnly.fsh in Resources */,
 				389D846E1802401700EA9299 /* InfoPlist.strings in Resources */,
 				389D84761802401700EA9299 /* Images.xcassets in Resources */,
 			);
@@ -241,6 +276,13 @@
 			files = (
 				389D84741802401700EA9299 /* AppDelegate.m in Sources */,
 				389D84701802401700EA9299 /* main.m in Sources */,
+				389D84A51802584500EA9299 /* GLK2Attribute.m in Sources */,
+				389D849A18024D7700EA9299 /* VertexPositionUnprojected.vsh in Sources */,
+				389D849F18024E7D00EA9299 /* GLK2Shader.m in Sources */,
+				389D849C18024DCC00EA9299 /* FragmentColorOnly.fsh in Sources */,
+				389D84A2180255D100EA9299 /* GLK2ShaderProgram.m in Sources */,
+				389D8498180242F700EA9299 /* ViewController.m in Sources */,
+				389D8495180240EF00EA9299 /* GLK2DrawCall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
