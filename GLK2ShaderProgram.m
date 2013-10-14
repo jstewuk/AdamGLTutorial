@@ -108,8 +108,6 @@
         
         GLK2Attribute* newAttribute = [GLK2Attribute attributeNamed:stringName GLType:attributeType GLLocation:attributeLocation];
         
-        NSLog(@"Attribute: %@", stringName);
-        
         self.vertexAttributesByName[stringName] = newAttribute;
     }
     
