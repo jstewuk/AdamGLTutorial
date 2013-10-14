@@ -34,29 +34,35 @@
     NSAssert( self.localContext != nil, @"Failed to create ES context");
     [EAGLContext setCurrentContext:self.localContext];
     
+    GLKView *view = (GLKView *)self.view;
+    view.context = self.localContext;
+    view.drawableDepthFormat = GLKViewDrawableColorFormatRGBA8888;
+    [view bindDrawable];
+    
     self.drawCalls = [NSMutableArray array];
     self.delegate = self;
+    
+    // Draw Call 1
     GLK2DrawCall *simpleClearingCall = [[GLK2DrawCall alloc] init];
     simpleClearingCall.shouldClearColorBit = YES;
     [self.drawCalls addObject:simpleClearingCall];
     
-    GLKView *view = (GLKView *)self.view;
-    view.context = self.localContext;
-    view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
-    
+    // Draw Call 2
     GLK2DrawCall *drawOneTriangle = [[GLK2DrawCall alloc] init];
     drawOneTriangle.shaderProgram = [GLK2ShaderProgram shaderProgramFromVertexFilename:@"VertexPositionUnprojected"
                                                                       fragmentFilename:@"FragmentColorOnly"];
     glUseProgram(drawOneTriangle.shaderProgram.glName);
     GLK2Attribute *attribute = [drawOneTriangle.shaderProgram attributeNamed:@"position"];
-    //[drawOneTriangle setClearColorRed:0 green:1.0 blue:0 alpha:1.0f];
-    //drawOneTriangle.shouldClearColorBit = NO;
+    [drawOneTriangle setClearColorRed:0 green:1.0 blue:0 alpha:1.0f];
+    drawOneTriangle.shouldClearColorBit = NO;
     
     GLfloat z = -0.5;
-    GLKVector3* cpuBuffer = malloc(sizeof(GLKVector3) * 3);
-    cpuBuffer[0] = GLKVector3Make(-1, -1, z);
-    cpuBuffer[1] = GLKVector3Make( 0,  1, z);
-    cpuBuffer[2] = GLKVector3Make( 1, -1, z);
+    GLKVector3 cpuBuffer[] = {
+        GLKVector3Make(-1, -1, z),
+        GLKVector3Make( 0,  1, z),
+        GLKVector3Make( 1, -1, z)
+    };
+    
 
     GLuint VBOName, VAOName;
     glGenVertexArraysOES(1, &VAOName);

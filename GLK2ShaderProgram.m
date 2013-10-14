@@ -53,27 +53,21 @@
 - (void)setFragmentShader:(GLK2Shader *)fragmentShader {
     if (_fragmentShader == fragmentShader) return;
     
-    if (_fragmentShader) {
-        glDetachShader(self.glName, _fragmentShader.glName);
-        _fragmentShader = fragmentShader;
-    }
+    if (_fragmentShader) glDetachShader(self.glName, _fragmentShader.glName);
     
-    if (_fragmentShader) {
-        glAttachShader(self.glName, fragmentShader.glName);
-    }
+    _fragmentShader = fragmentShader;
+    
+    if (_fragmentShader) glAttachShader(self.glName, fragmentShader.glName);
 }
 
 - (void)setVertexShader:(GLK2Shader *)vertexShader {
     if (_vertexShader == vertexShader) return;
     
-    if (_vertexShader) {
-        glDetachShader(self.glName, _vertexShader.glName);
-        _vertexShader = vertexShader;
-    }
+    if (_vertexShader) glDetachShader(self.glName, _vertexShader.glName);
     
-    if (_vertexShader) {
-        glAttachShader(self.glName, vertexShader.glName);
-    }
+    _vertexShader = vertexShader;
+    
+    if (_vertexShader) glAttachShader(self.glName, vertexShader.glName);
 }
 
 
@@ -114,6 +108,8 @@
         
         GLK2Attribute* newAttribute = [GLK2Attribute attributeNamed:stringName GLType:attributeType GLLocation:attributeLocation];
         
+        NSLog(@"Attribute: %@", stringName);
+        
         self.vertexAttributesByName[stringName] = newAttribute;
     }
     
@@ -129,7 +125,7 @@
     return [self.vertexAttributesByName allValues];
 }
 
-+ (void)linkProgram:(GLuint) programRef {
++ (void)linkProgram:(GLuint)programRef {
     GLint status;
     glLinkProgram(programRef);
     glGetProgramiv(programRef, GL_LINK_STATUS, &status);

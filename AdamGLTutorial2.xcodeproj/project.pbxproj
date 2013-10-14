@@ -98,18 +98,11 @@
 		389D84571802401700EA9299 = {
 			isa = PBXGroup;
 			children = (
-				389D8493180240EF00EA9299 /* GLK2DrawCall.h */,
-				389D8494180240EF00EA9299 /* GLK2DrawCall.m */,
 				389D8496180242F700EA9299 /* ViewController.h */,
 				389D8497180242F700EA9299 /* ViewController.m */,
 				389D849918024D7700EA9299 /* VertexPositionUnprojected.vsh */,
 				389D849B18024DCC00EA9299 /* FragmentColorOnly.fsh */,
-				389D849D18024E7D00EA9299 /* GLK2Shader.h */,
-				389D84A31802584500EA9299 /* GLK2Attribute.h */,
-				389D84A41802584500EA9299 /* GLK2Attribute.m */,
-				389D849E18024E7D00EA9299 /* GLK2Shader.m */,
-				389D84A0180255D100EA9299 /* GLK2ShaderProgram.h */,
-				389D84A1180255D100EA9299 /* GLK2ShaderProgram.m */,
+				38D77857180C4DE4009EFF3A /* GLK2 */,
 				389D84691802401700EA9299 /* AdamGLTutorial2 */,
 				389D84821802401700EA9299 /* AdamGLTutorial2Tests */,
 				389D84621802401700EA9299 /* Frameworks */,
@@ -175,6 +168,21 @@
 				389D84851802401700EA9299 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38D77857180C4DE4009EFF3A /* GLK2 */ = {
+			isa = PBXGroup;
+			children = (
+				389D8493180240EF00EA9299 /* GLK2DrawCall.h */,
+				389D8494180240EF00EA9299 /* GLK2DrawCall.m */,
+				389D849D18024E7D00EA9299 /* GLK2Shader.h */,
+				389D849E18024E7D00EA9299 /* GLK2Shader.m */,
+				389D84A31802584500EA9299 /* GLK2Attribute.h */,
+				389D84A41802584500EA9299 /* GLK2Attribute.m */,
+				389D84A0180255D100EA9299 /* GLK2ShaderProgram.h */,
+				389D84A1180255D100EA9299 /* GLK2ShaderProgram.m */,
+			);
+			name = GLK2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +491,7 @@
 				389D848E1802401700EA9299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		389D848F1802401700EA9299 /* Build configuration list for PBXNativeTarget "AdamGLTutorial2Tests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +500,7 @@
 				389D84911802401700EA9299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
